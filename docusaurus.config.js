@@ -9,15 +9,15 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://physical-ai-textbook.github.io',
+  url: 'https://ambreen1405.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/book-ai/',
+  baseUrl: '/physical-ai/',
   trailingSlash: true,
 
   // GitHub pages deployment config.
-  organizationName: 'physical-ai-textbook', // Usually your GitHub org/user name.
-  projectName: 'book-ai', // Usually your repo name.
+  organizationName: 'Ambreen1405', // Usually your GitHub org/user name.
+  projectName: 'physical-ai', // Usually your repo name.
   deploymentBranch: 'gh-pages', // The branch to deploy to GitHub Pages
 
   onBrokenLinks: 'throw',

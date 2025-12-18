@@ -84,16 +84,21 @@
 
 ### Functional Requirements
 
-- **FR-001**: System MUST [specific capability, e.g., "allow users to create accounts"]
-- **FR-002**: System MUST [specific capability, e.g., "validate email addresses"]  
-- **FR-003**: Users MUST be able to [key interaction, e.g., "reset their password"]
-- **FR-004**: System MUST [data requirement, e.g., "persist user preferences"]
-- **FR-005**: System MUST [behavior, e.g., "log all security events"]
+- **FR-001**: System MUST use Docusaurus 3.x with TypeScript for all custom functionality
+- **FR-002**: System MUST implement all UI components with React 18+ and Tailwind CSS
+- **FR-003**: System MUST provide content in Markdown/MDX format with proper learning objectives
+- **FR-004**: System MUST include Python (ROS 2 rclpy) code examples with syntax highlighting
+- **FR-005**: System MUST implement floating chat assistant UI positioned in bottom-right corner
+- **FR-006**: System MUST comply with WCAG 2.1 AA accessibility standards
+- **FR-007**: System MUST use the specified blue color theme (Primary: #2563eb, Secondary: #1e40af, Accent: #60a5fa, Background: #f8fafc, Text: #1e293b)
+- **FR-008**: System MUST optimize all assets for fast loading with minimal bundle size
+- **FR-009**: System MUST provide step-by-step tutorials with progressive difficulty
+- **FR-010**: System MUST include assessment questions and references in IEEE format
 
 *Example of marking unclear requirements:*
 
-- **FR-006**: System MUST authenticate users via [NEEDS CLARIFICATION: auth method not specified - email/password, SSO, OAuth?]
-- **FR-007**: System MUST retain user data for [NEEDS CLARIFICATION: retention period not specified]
+- **FR-011**: System MUST support [NEEDS CLARIFICATION: specific NVIDIA Isaac, Gazebo, or Unity integration requirements]
+- **FR-012**: System MUST retain content for [NEEDS CLARIFICATION: retention period not specified]
 
 ### Key Entities *(include if feature involves data)*
 

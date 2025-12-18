@@ -31,7 +31,12 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- Documentation-First Approach: All feature documentation must be created in Markdown/MDX format before implementation
+- Type-Safe Development: All custom components must use TypeScript with strict compilation settings
+- Accessibility-First Design: All UI components must comply with WCAG 2.1 AA standards
+- Performance-Optimized Delivery: All assets must be optimized for fast loading; build times under 60 seconds
+- Cross-Platform Compatibility: Code examples must work with ROS 2, NVIDIA Isaac, Gazebo, and Unity
+- Quality-Driven Content Accuracy: All technical content must be verified for accuracy
 
 ## Project Structure
 

@@ -48,9 +48,12 @@ description: "Task list template for feature implementation"
 
 **Purpose**: Project initialization and basic structure
 
-- [ ] T001 Create project structure per implementation plan
-- [ ] T002 Initialize [language] project with [framework] dependencies
-- [ ] T003 [P] Configure linting and formatting tools
+- [ ] T001 Create project structure per implementation plan with docs/welcome, docs/module-1, docs/module-2, docs/module-3, docs/module-4, docs/introductory-content folders
+- [ ] T002 Initialize Docusaurus 3.x project with TypeScript dependencies
+- [ ] T003 [P] Configure Tailwind CSS integration with Docusaurus
+- [ ] T004 [P] Configure linting and formatting tools for TypeScript and Markdown
+- [ ] T005 Set up GitHub Pages deployment configuration
+- [ ] T006 Configure environment variables for API keys
 
 ---
 
@@ -62,12 +65,12 @@ description: "Task list template for feature implementation"
 
 Examples of foundational tasks (adjust based on your project):
 
-- [ ] T004 Setup database schema and migrations framework
-- [ ] T005 [P] Implement authentication/authorization framework
-- [ ] T006 [P] Setup API routing and middleware structure
-- [ ] T007 Create base models/entities that all stories depend on
-- [ ] T008 Configure error handling and logging infrastructure
-- [ ] T009 Setup environment configuration management
+- [ ] T007 Configure TypeScript with strict compilation settings (noImplicitAny, strictNullChecks, strictFunctionTypes)
+- [ ] T008 [P] Implement accessibility framework for WCAG 2.1 AA compliance
+- [ ] T009 [P] Setup color theme with specified values (Primary: #2563eb, Secondary: #1e40af, Accent: #60a5fa, Background: #f8fafc, Text: #1e293b)
+- [ ] T010 Create base Docusaurus configuration with proper MDX support
+- [ ] T011 Configure build optimization for fast loading and minimal bundle size
+- [ ] T012 Setup environment configuration management
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
@@ -150,12 +153,17 @@ Examples of foundational tasks (adjust based on your project):
 
 **Purpose**: Improvements that affect multiple user stories
 
-- [ ] TXXX [P] Documentation updates in docs/
+- [ ] TXXX [P] Documentation updates in docs/ with learning objectives, theory sections, practical examples, and assessments
+- [ ] TXXX [P] Implement floating chat assistant UI positioned in bottom-right corner
+- [ ] TXXX [P] Add Python (ROS 2 rclpy) code examples with syntax highlighting
+- [ ] TXXX [P] Add step-by-step tutorials with progressive difficulty
+- [ ] TXXX [P] Add assessment questions and references in IEEE format
 - [ ] TXXX Code cleanup and refactoring
 - [ ] TXXX Performance optimization across all stories
 - [ ] TXXX [P] Additional unit tests (if requested) in tests/unit/
 - [ ] TXXX Security hardening
 - [ ] TXXX Run quickstart.md validation
+- [ ] TXXX Verify all content meets quality accuracy standards for ROS 2, NVIDIA Isaac, Gazebo, and Unity
 
 ---
 

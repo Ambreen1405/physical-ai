@@ -1,0 +1,226 @@
+# Content API Contract for Physical AI & Humanoid Robotics Textbook
+
+# This contract describes the static content structure and metadata
+# that the Docusaurus textbook will expose as static JSON endpoints
+
+openapi: 3.0.0
+info:
+  title: Physical AI & Humanoid Robotics Textbook Content API
+  description: Static content endpoints for the textbook website
+  version: 1.0.0
+servers:
+  - url: https://physical-ai-textbook.github.io/book-ai
+    description: GitHub Pages deployment of the textbook
+
+paths:
+  /api/content/modules:
+    get:
+      summary: Get list of all modules
+      description: Returns a list of all textbook modules with basic information
+      responses:
+        '200':
+          description: List of modules
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  modules:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Module'
+
+  /api/content/module/{moduleId}:
+    get:
+      summary: Get specific module details
+      description: Returns detailed information about a specific module
+      parameters:
+        - name: moduleId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID of the module to retrieve
+      responses:
+        '200':
+          description: Module details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Module'
+        '404':
+          description: Module not found
+
+  /api/content/chapters:
+    get:
+      summary: Get list of all chapters
+      description: Returns a list of all textbook chapters
+      responses:
+        '200':
+          description: List of chapters
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  chapters:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Chapter'
+
+  /api/content/chapter/{chapterId}:
+    get:
+      summary: Get specific chapter details
+      description: Returns detailed information about a specific chapter
+      parameters:
+        - name: chapterId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID of the chapter to retrieve
+      responses:
+        '200':
+          description: Chapter details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Chapter'
+        '404':
+          description: Chapter not found
+
+components:
+  schemas:
+    Module:
+      type: object
+      required:
+        - id
+        - title
+        - description
+        - order
+        - chapters
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the module
+          example: "module-1"
+        title:
+          type: string
+          description: Display title of the module
+          example: "Module 1: ROS 2 Fundamentals"
+        description:
+          type: string
+          description: Brief description of the module
+          example: "Introduction to ROS 2 architecture, nodes, topics, and services"
+        order:
+          type: integer
+          description: Sequence order of the module in the textbook
+          example: 1
+        chapters:
+          type: array
+          description: List of chapter IDs in this module
+          items:
+            type: string
+          example: ["intro", "ros2-architecture", "nodes-topics-services", "assessment"]
+
+    Chapter:
+      type: object
+      required:
+        - id
+        - title
+        - module_id
+        - content
+        - learning_objectives
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the chapter
+          example: "ros2-architecture"
+        title:
+          type: string
+          description: Display title of the chapter
+          example: "ROS 2 Architecture"
+        module_id:
+          type: string
+          description: ID of the parent module
+          example: "module-1"
+        content:
+          type: string
+          description: Markdown content of the chapter (truncated for performance)
+          example: "## Learning Objectives\n- Understand ROS 2 architecture principles\n- Learn about nodes, topics, and services..."
+        learning_objectives:
+          type: array
+          description: List of learning objectives for this chapter
+          items:
+            type: string
+          example: ["Understand ROS 2 architecture principles", "Learn about nodes, topics, and services"]
+        sidebar_position:
+          type: integer
+          description: Position in the sidebar navigation
+          example: 2
+        code_examples:
+          type: array
+          description: List of code examples in this chapter
+          items:
+            $ref: '#/components/schemas/CodeExample'
+        assessment_questions:
+          type: array
+          description: List of assessment questions for this chapter
+          items:
+            $ref: '#/components/schemas/AssessmentQuestion'
+
+    CodeExample:
+      type: object
+      required:
+        - id
+        - language
+        - code
+        - explanation
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the code example
+          example: "example-1"
+        language:
+          type: string
+          description: Programming language of the code
+          example: "python"
+        code:
+          type: string
+          description: The actual code content
+          example: "import rclpy\nfrom rclpy.node import Node\n\nclass MyNode(Node):\n    def __init__(self):\n        super().__init__('my_node')\n        self.get_logger().info('Hello from my_node')"
+        explanation:
+          type: string
+          description: Explanation of what the code does
+          example: "This example shows how to create a basic ROS 2 node in Python"
+
+    AssessmentQuestion:
+      type: object
+      required:
+        - id
+        - question
+        - question_type
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the question
+          example: "q1"
+        question:
+          type: string
+          description: The actual question text
+          example: "What is the purpose of a ROS 2 node?"
+        question_type:
+          type: string
+          enum: [multiple-choice, short-answer, essay, code]
+          description: Type of the question
+          example: "short-answer"
+        options:
+          type: array
+          description: Options for multiple choice questions
+          items:
+            type: string
+          example: ["A component that performs computation", "A communication channel", "A data structure"]
+        correct_answer:
+          type: string
+          description: The correct answer
+          example: "A component that performs computation"

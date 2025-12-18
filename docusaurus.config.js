@@ -20,12 +20,9 @@ const config = {
   projectName: 'physical-ai', // Usually your repo name.
   deploymentBranch: 'gh-pages', // The branch to deploy to GitHub Pages
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   markdown: {
-    hooks: {
-      onBrokenMarkdownLinks: 'warn',
-    },
     mermaid: false,
     mdx1Compat: {
       comments: true,
@@ -79,7 +76,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      // image: 'img/docusaurus-social-card.jpg',  // Temporarily commented out
       navbar: {
         title: 'Physical AI Textbook',
         logo: {

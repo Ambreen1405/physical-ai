@@ -48,7 +48,7 @@ const FeatureList: FeatureItem[] = [
         Build next-generation autonomous systems.
       </>
     ),
-    link: '/docs/module-4/intro'
+    link: '/docs/welcome'  // Temporary link to welcome page
   }
 ];
 

@@ -109,11 +109,11 @@ const config = {
               },
               {
                 label: 'Module 1: ROS 2',
-                to: '/docs/module-1',
+                to: '/docs/module-1/intro',
               },
               {
                 label: 'Module 2: Simulation',
-                to: '/docs/module-2',
+                to: '/docs/module-2/intro',
               },
             ],
           },

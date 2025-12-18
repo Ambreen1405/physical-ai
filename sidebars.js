@@ -39,17 +39,7 @@ const sidebars = {
       'module-3/synthetic-data',
       'module-3/isaac-vslam',
       'module-3/nav2-path-planning',
-      'module-3/sim-to-real',
-      'module-3/assessment'
-    ],
-    'Module 4': [
-      'module-4/intro',
-      'module-4/llms-robotics',
-      'module-4/voice-to-action',
-      'module-4/cognitive-planning',
-      'module-4/multimodal-interaction',
-      'module-4/capstone-project',
-      'module-4/assessment'
+      'module-3/sim-to-real'
     ]
   },
 };

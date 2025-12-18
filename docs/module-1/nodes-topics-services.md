@@ -2,7 +2,7 @@
 id: nodes-topics-services
 title: Nodes, Topics, Services
 sidebar_position: 3
-description: Comprehensive guide to ROS 2 communication patterns: nodes, topics, and services
+description: "Comprehensive guide to ROS 2 communication patterns: nodes, topics, and services"
 keywords: [ros2 nodes, topics, services, communication patterns, robotics communication]
 ---
 

@@ -30,7 +30,7 @@ This module consists of the following chapters:
 4. [Isaac ROS VSLAM](./isaac-vslam.md) - Visual SLAM implementation
 5. [Nav2 Path Planning](./nav2-path-planning.md) - Bipedal navigation systems
 6. [Sim-to-Real Transfer](./sim-to-real.md) - Deployment techniques
-7. [Module 3 Assessment](./assessment.md) - Comprehensive evaluation
+7. Comprehensive evaluation
 
 ## The AI-Robot Brain Concept
 

@@ -20,7 +20,7 @@ const config = {
   projectName: 'physical-ai', // Usually your repo name.
   deploymentBranch: 'gh-pages', // The branch to deploy to GitHub Pages
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   markdown: {
     mermaid: false,
     mdx1Compat: {

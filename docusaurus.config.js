@@ -21,7 +21,6 @@ const config = {
   deploymentBranch: 'gh-pages', // The branch to deploy to GitHub Pages
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
   markdown: {
     mermaid: false,
     mdx1Compat: {

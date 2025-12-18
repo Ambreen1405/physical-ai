@@ -29,6 +29,10 @@ const config = {
       admonitions: true,
       headingIds: true,
     },
+    // Add hooks to handle broken markdown links properly
+    hooks: {
+      onBrokenMarkdownLinks: 'warn', // This addresses the deprecation warning
+    },
   },
 
   // Even if you don't use internationalization, you can use this field to set
